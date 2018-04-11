@@ -1,0 +1,476 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<title></title>
+<!-- <link rel="stylesheet" href="package/big.css"> -->
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" href="css/login.css"/>
+<link rel="stylesheet" href="css/lottery.css"/>
+<link rel="stylesheet" href="css/user.css"/> 
+<link rel="stylesheet" href="css/news.css"/>
+<link rel="stylesheet" href="css/activity.css"/>  
+<link rel="stylesheet" href="css/dropload.min.css"/>
+<link rel="stylesheet" href="css/layer.css"/>
+<link rel="stylesheet" href="css/dialog.css"/>
+<link rel="stylesheet" href="css/mobile-select-area.css"/>
+<link rel="stylesheet" href="css/mobiscroll.select.min.css"/>
+<link rel="stylesheet" href="css/app_fix.css"/>
+
+<script>
+    var ConfigObj = {
+        platForm: 'web', // web 平台
+        isDebug: false // 设为 true 表示是测试环境
+//      version: '1.0.0'
+    }
+
+</script>
+<script type="text/javascript" src="lib/tool/base64.js"></script>
+<script type="text/javascript" src="lib/tool/md5.js"></script>
+<script type="text/javascript" src="lib/zepto/zepto.js"></script>
+<script type="text/javascript" src="lib/zepto/touch.js"></script>
+<script type="text/javascript" src="lib/zepto/fx.js"></script>
+<script type="text/javascript" src="lib/zepto/fx_methods.js"></script>
+<script type="text/javascript" src="lib/zepto/alertmsg.js"></script>
+<script type="text/javascript" src="lib/zepto/deferred.js"></script>
+<script type="text/javascript" src="lib/zepto/callbacks.js"></script>
+<script type="text/javascript" src="lib/plugin/aes_1.js"></script>
+<script type="text/javascript" src="lib/plugin/aes.js"></script>
+<script type="text/javascript" src="lib/plugin/swipeslide.js"></script>
+<script type="text/javascript" src="lib/plugin/circular-progress.js"></script>
+<script type="text/javascript" src="lib/plugin/iscroll.js"></script>
+<script type="text/javascript" src="lib/plugin/dropload.js"></script>
+<script type="text/javascript" src="lib/plugin/cityPicker.js"></script>
+<script type="text/javascript" src="lib/plugin/layer.m.js"></script>
+<script type="text/javascript" src="lib/plugin/lrz/lrz.bundle.js"></script>
+<script type="text/javascript" src="lib/plugin/dialog.js"></script>
+<script type="text/javascript" src="lib/plugin/mobile-select-area.js"></script>
+<script type="text/javascript" src="lib/plugin/mobiscroll.js"></script>
+<script type="text/javascript" src="lib/polyfill/es6.js"></script>
+
+<script type="text/javascript" src="lib/controller/pageController.js"></script>
+<script type="text/javascript" src="lib/controller/global.js"></script>
+
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/user/login.js"></script>
+<script type="text/javascript" src="js/user/regByMobile.js"></script>  
+<script type="text/javascript" src="js/user/register.js"></script>  
+<script type="text/javascript" src="js/user/userCenter.js"></script> 
+<script type="text/javascript" src="js/activity/award.js"></script>
+<script type="text/javascript" src="js/activity/regsendBonus.js"></script>
+<script type="text/javascript" src="js/activity/regnewBouns.js"></script>
+<script type="text/javascript" src="js/activity/invsendBonus.js"></script>
+<script type="text/javascript" src="js/activity/invsendBonusDetail.js"></script>
+<script type="text/javascript" src="js/activity/redBag.js"></script>
+<script type="text/javascript" src="js/activity/scorePrize.js"></script>
+<script type="text/javascript" src="js/activity/sendPrize.js"></script>
+<script type="text/javascript" src="js/activity/scoreAct.js"></script>
+<script type="text/javascript" src="js/numlottery/numlottery.js"></script>  
+<script type="text/javascript" src="js/numlottery/ssq.js"></script>  
+<script type="text/javascript" src="js/numlottery/dlt.js"></script>  
+<script type="text/javascript" src="js/numlottery/pl3.js"></script>  
+<script type="text/javascript" src="js/numlottery/d3.js"></script>  
+<script type="text/javascript" src="js/numlottery/pl5.js"></script>  
+<script type="text/javascript" src="js/numlottery/qxc.js"></script>  
+<script type="text/javascript" src="js/numlottery/fastBet.js"></script>
+<script type="text/javascript" src="js/numlottery/fastK3.js"></script>
+<script type="text/javascript" src="js/numlottery/hn4j1.js"></script>
+<script type="text/javascript" src="js/numlottery/plan.js"></script>   
+<script type="text/javascript" src="js/numlottery/syxwPlan.js"></script>  
+<script type="text/javascript" src="js/numlottery/ksPlan.js"></script>
+<script type="text/javascript" src="js/numlottery/buyOpenTicket.js"></script>
+<script type="text/javascript" src="js/sporttery/sportterySoccer.js"></script>  
+<script type="text/javascript" src="js/sporttery/soccerMix.js"></script>  
+<script type="text/javascript" src="js/sporttery/soccerToto.js"></script> 
+<script type="text/javascript" src="js/sporttery/soccerR9.js"></script>  
+<script type="text/javascript" src="js/sporttery/sportteryBonus.js"></script>  
+<script type="text/javascript" src="js/sporttery/sportteryFilter.js"></script>
+<script type="text/javascript" src="js/sporttery/prizeTool.js"></script> 
+<script type="text/javascript" src="js/sporttery/soccer2x1.js"></script> 
+<script type="text/javascript" src="js/sporttery/basketMix.js"></script> 
+<script type="text/javascript" src="js/sporttery/basketFilter.js"></script> 
+<script type="text/javascript" src="js/confirm/confirm.js"></script>   
+<script type="text/javascript" src="js/confirm/dltConfirm.js"></script>
+<script type="text/javascript" src="js/confirm/ssqConfirm.js"></script>    
+<script type="text/javascript" src="js/confirm/pl3Confirm.js"></script> 
+<script type="text/javascript" src="js/confirm/d3Confirm.js"></script>    
+<script type="text/javascript" src="js/confirm/pl5Confirm.js"></script>   
+<script type="text/javascript" src="js/confirm/qxcConfirm.js"></script> 
+<script type="text/javascript" src="js/confirm/fastBetConfirm.js"></script>
+<script type="text/javascript" src="js/confirm/fastK3Confirm.js"></script>
+<script type="text/javascript" src="js/confirm/hn4j1Confirm.js"></script>     
+<script type="text/javascript" src="js/confirm/buyConfirm.js"></script>   
+<script type="text/javascript" src="js/user/ebankRecharge.js"></script>   
+<script type="text/javascript" src="js/user/ebankList.js"></script>      
+<script type="text/javascript" src="js/user/withDraw.js"></script>  
+<script type="text/javascript" src="js/user/withDrawSelect.js"></script>
+<script type="text/javascript" src="js/user/wechatdrawSuc.js"></script> 
+<script type="text/javascript" src="js/user/withdrawRules.js"></script>    
+<script type="text/javascript" src="js/user/bindBank.js"></script>        
+<script type="text/javascript" src="js/user/modifyBank.js"></script>      
+<script type="text/javascript" src="js/user/alipayWap.js"></script>       
+<script type="text/javascript" src="js/user/wechatpayApp.js"></script>
+<script type="text/javascript" src="js/user/wechatpayWeb.js"></script>
+<script type="text/javascript" src="js/user/wechatDraw.js"></script>
+<script type="text/javascript" src="js/user/nobindwechat.js"></script>
+<script type="text/javascript" src="js/user/stationRecharge.js"></script>
+<script type="text/javascript" src="js/user/rechargeStatus.js"></script>   
+<script type="text/javascript" src="js/user/protocol.js"></script>
+<script type="text/javascript" src="js/user/hemaixy.js"></script>
+<script type="text/javascript" src="js/user/payStatus.js"></script>
+<script type="text/javascript" src="js/user/cashier.js"></script>
+<script type="text/javascript" src="js/user/ticketCashier.js"></script>  
+<script type="text/javascript" src="js/user/modifyStationInfo.js"></script>    
+<script type="text/javascript" src="js/discover/lotteryList.js"></script>       
+<script type="text/javascript" src="js/discover/discover.js"></script> 
+<script type="text/javascript" src="js/discover/activityIdx.js"></script>
+<script type="text/javascript" src="js/kaijiang/kaijiangIndex.js"></script>
+<script type="text/javascript" src="js/kaijiang/numKaijiang.js"></script>
+<script type="text/javascript" src="js/kaijiang/liveScore.js"></script> 
+<script type="text/javascript" src="js/kaijiang/fastTrend.js"></script>  
+<script type="text/javascript" src="js/kaijiang/fastTime.js"></script>
+<script type="text/javascript" src="js/kaijiang/fastK3Trend.js"></script>
+<script type="text/javascript" src="js/kaijiang/fastK3Time.js"></script>
+<script type="text/javascript" src="js/kaijiang/dltTrend.js"></script>
+<script type="text/javascript" src="js/kaijiang/dltTime.js"></script> 
+<script type="text/javascript" src="js/kaijiang/ssqTrend.js"></script>  
+<script type="text/javascript" src="js/kaijiang/ssqTime.js"></script> 
+<script type="text/javascript" src="js/kaijiang/pl3Trend.js"></script>  
+<script type="text/javascript" src="js/kaijiang/pl3Time.js"></script>   
+<script type="text/javascript" src="js/kaijiang/d3Trend.js"></script>  
+<script type="text/javascript" src="js/kaijiang/d3Time.js"></script>  
+<script type="text/javascript" src="js/kaijiang/pl5Trend.js"></script>  
+<script type="text/javascript" src="js/kaijiang/pl5Time.js"></script>  
+<script type="text/javascript" src="js/kaijiang/qxcTrend.js"></script>  
+<script type="text/javascript" src="js/kaijiang/qxcTime.js"></script>
+<script type="text/javascript" src="js/kaijiang/hn4j1Trend.js"></script>  
+<script type="text/javascript" src="js/kaijiang/hn4j1Time.js"></script>   
+<script type="text/javascript" src="js/kaijiang/chartIdx.js"></script>      
+<script type="text/javascript" src="js/set/lotteryRules.js"></script>      
+<script type="text/javascript" src="js/set/setting.js"></script>               
+<script type="text/javascript" src="js/set/userSet.js"></script>             
+<script type="text/javascript" src="js/set/aboutUs.js"></script>           
+<script type="text/javascript" src="js/set/aboutSoftware.js"></script>     
+<script type="text/javascript" src="js/set/noPwdPay.js"></script>         
+<script type="text/javascript" src="js/set/help.js"></script>              
+<script type="text/javascript" src="js/set/helpDetail.js"></script>   
+<script type="text/javascript" src="js/set/wifiGrant.js"></script>  
+<script type="text/javascript" src="js/set/prizeNotify.js"></script>   
+<script type="text/javascript" src="js/set/feedback.js"></script>  
+<script type="text/javascript" src="js/set/feedbackList.js"></script>     
+<script type="text/javascript" src="js/set/serviceCode.js"></script> 
+<script type="text/javascript" src="js/set/service.js"></script>
+<script type="text/javascript" src="js/set/sweep.js"></script>
+<script type="text/javascript" src="js/set/extendList.js"></script>
+<script type="text/javascript" src="js/set/extendDetail.js"></script> 
+<script type="text/javascript" src="js/station/qupiaoSet.js"></script>     
+<script type="text/javascript" src="js/station/stationInfo.js"></script>  
+<script type="text/javascript" src="js/station/stationDetail.js"></script> 
+<script type="text/javascript" src="js/station/stationListMap.js"></script> 
+<script type="text/javascript" src="js/station/stationCode.js"></script>   
+<script type="text/javascript" src="js/station/localSite.js"></script>     
+<script type="text/javascript" src="js/station/searchSite.js"></script>    
+<script type="text/javascript" src="js/station/qupiaoPwd.js"></script>
+<script type="text/javascript" src="js/station/signProtocol.js"></script>
+<script type="text/javascript" src="js/station/manageInfo.js"></script>
+<script type="text/javascript" src="js/record/projectDetail.js"></script>
+<script type="text/javascript" src="js/record/projectSubDetail.js"></script>  
+<script type="text/javascript" src="js/record/ticketDetail.js"></script> 
+<script type="text/javascript" src="js/record/prizeReviewDetail.js"></script>         
+<script type="text/javascript" src="js/record/withdrawDetail.js"></script>    
+<script type="text/javascript" src="js/record/cashRecord.js"></script>        
+<script type="text/javascript" src="js/record/handselRecord.js"></script>     
+<script type="text/javascript" src="js/record/betRecord.js"></script>          
+<script type="text/javascript" src="js/record/searchRecord.js"></script>        
+<script type="text/javascript" src="js/record/searchBetResult.js"></script>     
+<script type="text/javascript" src="js/record/searchCashRecord.js"></script>    
+<script type="text/javascript" src="js/record/searchCashResult.js"></script>    
+<script type="text/javascript" src="js/record/getTicketRecord.js"></script>     
+<script type="text/javascript" src="js/record/freezeRecord.js"></script>
+<script type="text/javascript" src="js/record/rechargeRecord.js"></script>           
+<script type="text/javascript" src="js/record/bonusRecord.js"></script>         
+<script type="text/javascript" src="js/record/scoreRecord.js"></script>            
+<script type="text/javascript" src="js/record/searchScoreRecord.js"></script>     
+<script type="text/javascript" src="js/record/searchScoreResult.js"></script>     
+<script type="text/javascript" src="js/record/withdrawRecord.js"></script>  
+<script type="text/javascript" src="js/record/planRecord.js"></script>
+<script type="text/javascript" src="js/record/planDetail.js"></script> 
+<script type="text/javascript" src="js/record/planSubDetail.js"></script>  
+<script type="text/javascript" src="js/record/searchPlan.js"></script> 
+<script type="text/javascript" src="js/record/searchPlanResult.js"></script> 
+<script type="text/javascript" src="js/record/memberBetRecord.js"></script>  
+<script type="text/javascript" src="js/record/scorePrizeRecord.js"></script>   
+<script type="text/javascript" src="js/record/openTicketRecord.js"></script> 
+<script type="text/javascript" src="js/record/otImgDetail.js"></script>       
+<script type="text/javascript" src="js/user/userInfo.js"></script>                
+<script type="text/javascript" src="js/user/modifyUserName.js"></script>          
+<script type="text/javascript" src="js/user/modifyPwd.js"></script> 
+<script type="text/javascript" src="js/user/setPwd.js"></script>
+<script type="text/javascript" src="js/user/verifyId.js"></script>           
+<script type="text/javascript" src="js/user/verifyInfo.js"></script>         
+<script type="text/javascript" src="js/user/modifyPhone.js"></script> 
+<script type="text/javascript" src="js/user/bindPhone.js"></script>       
+<script type="text/javascript" src="js/user/findPwd.js"></script> 
+<script type="text/javascript" src="js/user/resetPwd.js"></script> 
+<script type="text/javascript" src="js/user/regRealName.js"></script> 
+<script type="text/javascript" src="js/user/regSuccess.js"></script> 
+<script type="text/javascript" src="js/user/verifyPwd.js"></script> 
+<script type="text/javascript" src="js/user/account.js"></script> 
+<script type="text/javascript" src="js/news/newsIdx.js"></script>
+<script type="text/javascript" src="js/news/newsDetail.js"></script> 
+<script type="text/javascript" src="js/news/newsList.js"></script>
+<script type="text/javascript" src="js/news/indexNews.js"></script>
+<script type="text/javascript" src="js/hemai/hemaiIndex.js"></script>
+<script type="text/javascript" src="js/hemai/hemai.js"></script>
+<script type="text/javascript" src="js/hemai/hotBigcafe.js"></script>
+<script type="text/javascript" src="js/hemai/myAttention.js"></script>
+<script type="text/javascript" src="js/hemai/myHemai.js"></script>
+<script type="text/javascript" src="js/hemai/starIndex.js"></script>
+<script type="text/javascript" src="js/hemai/hemaiDetail.js"></script>
+<script type="text/javascript" src="js/hemai/hmUserlist.js"></script>
+<script type="text/javascript" src="js/hemai/hemaiList.js"></script>
+<!--<script type="text/javascript" src="cordova.js"></script>-->  <!-- cordova 功能暂时注释 --> 
+
+<style>
+	.user_id{padding-left: 6px;}
+    .user_phone{float: right!important;width: 51%;position: absolute;right: 0;top:38px;padding-left: 12px;}
+</style>
+</head>
+<body>
+<div id="onLin" style="position:absolute;top:10%;z-index: 999;width: 100%;" onclick="document.location.reload()">
+    <img src="images/wif.png" alt="图片被外星人劫持了，点击刷新">
+</div>
+<div class="bottomcon" >
+    <ul class="nav nav-bot clearfix" id="home_navObj" style="display: none;">
+        <li>
+            <a href="javascript:void(0)" class="on" data-t="home">
+                <p><em class="navicons n-lottery"></em></p>
+                <span>彩票</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-t="kaijiangIndex">
+                <p><em class="navicons n-kj"></em></p>
+                <span>开奖</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-t="hemaiIndex">
+                <p><em class="navicons n-hm"></em></p>
+                <span>合买</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-t="newsIdx">
+                <p><em class="navicons n-disc"></em></p>
+                <span >资讯</span>
+            </a>
+        </li>
+        <li >
+            <a href="javascript:void(0)" data-t="userCenter">
+                <p><em class="navicons n-user"></em></p>
+                <!-- <p><em class="navicons n-user" style="width: 30px;height: 30px;margin-top: -6px;"></em></p> -->
+                <span >我的</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+
+var iof = $.parseJSON(Global.crypt("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"));
+
+console.log(iof)
+
+if(window.navigator.onLine==true) {　
+// 　　　　alert("首次 -- 已连接");
+$('#onLin').css('display','none')
+
+　　}else {　
+    
+$('#onLin').css('display','block')
+//　　　　alert("首次 -- 未连接");
+
+　　}
+
+　　window.addEventListener("online", online, false);
+
+　　window.addEventListener("offline", offline, false);
+
+　　function online() {  alert("网络已经重新连接");  }
+
+　　function offline() {  alert("网络连接断开");  }
+
+document.body.addEventListener('touchstart', function () { });
+Global.initNav();      //底部导航功能	
+//if(ConfigObj.platForm == 'android'){
+//	Global.checkUpdate();  //检查版本更新
+//}
+Global.checkUpdate();  //检查版本更新
+if(ConfigObj.platForm == 'android' && typeof android_obj != 'undefined'){
+//	setTimeout(function(){
+//		android_obj.hideSplashscreen();
+//	},2000)
+	if(!Global.addBackEvent){  //手机硬键的返回事件
+		Global.addBackEvent =  true;
+		document.addEventListener('deviceready', function () {
+			document.addEventListener("backbutton", exitMyapp, false);
+		}, false);
+		var currentTime,firstTime,secondTime,clickCount=0;
+		function exitMyapp() {
+			    var checkInput = function () {
+                    // 获得焦点的元素
+                    var elem = document.querySelectorAll(':focus');
+                    if (elem.length) {
+                        var focusElem = elem[0];
+
+                        console.dir(focusElem);
+
+                        if (focusElem.tagName == 'TEXTAREA'
+                            || (focusElem.tagName == 'INPUT'
+                            && ['text', 'password', 'tel', 'url', 'number', 'range', 'search'].indexOf(focusElem.type) != -1))
+                            return focusElem;
+                    }
+                    return null;
+                };
+
+			    var checkResult = checkInput();
+
+			    if (checkResult) {
+			        // 失去焦点
+                    checkResult.blur();
+                } else {
+                	var pageId = Global.getActivePage()[0].id;
+                	if(ConfigObj.showWhere){
+	                	switch (pageId){
+				            case 'home':
+								clickCount++;
+								android_obj.toast('再按一次退出');
+								currentTime = new Date();
+								if (clickCount == 1) {
+									firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+								} else if(clickCount == 2){
+									secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+									if(secondTime-firstTime<2){  
+										navigator.app.exitApp();
+						            }else {  
+						                clickCount=0;  
+						            }; 
+								};
+				                break;
+				            default:
+				                if (window[pageId + 'Obj']) {
+				                    window[pageId + 'Obj'].goBack();
+				                } else {
+				                    homeObj.show();
+				                }
+				                break;
+				        }
+                	} else{
+                		switch (pageId){
+				            case 'indexNews':
+								clickCount++;
+								android_obj.toast('再按一次退出');
+								currentTime = new Date();
+								if (clickCount == 1) {
+									firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+								} else if(clickCount == 2){
+									secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+									if(secondTime-firstTime<2){  
+										navigator.app.exitApp();
+						            }else {  
+						                clickCount=0;  
+						            }; 
+								};
+				                break;
+				            default:
+				                if (window[pageId + 'Obj']) {
+				                    window[pageId + 'Obj'].goBack();
+				                } else {
+				                    homeObj.show();
+				                }
+				                break;
+				        }
+                	}
+                	
+//                  switch (pageId){
+//			            case 'home':
+//							clickCount++;
+//							currentTime = new Date();
+//							if (clickCount == 1) {
+//								firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+//							} else if(clickCount == 2){
+//								secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+//								if(secondTime-firstTime<2){  
+//									navigator.app.exitApp();
+//					            }else {  
+//					                clickCount=0;  
+//					            }; 
+//							};
+//			                break;
+//			            default:
+//			                if (window[pageId + 'Obj']) {
+//			                    window[pageId + 'Obj'].goBack();
+//			                } else {
+//			                    homeObj.show();
+//			                }
+//			                break;
+//			        }
+                }
+			}
+	} 
+}
+if(ConfigObj.platForm == 'ios'){
+	document.addEventListener('deviceready',function(){
+		if(typeof StatusBar != 'undefined'){
+			StatusBar.hide();	
+		}
+	},false)
+}
+Global.checkRoute();   //检查路由
+
+document.addEventListener('touchend', function (e) {
+
+    /*
+    var checkInput = function () {
+        // 获得焦点的元素
+        var elem = document.querySelectorAll(':focus');
+        if (elem.length) {
+            var focusElem = elem[0];
+
+            console.dir(focusElem);
+
+            if (focusElem.tagName == 'TEXTAREA'
+                || (focusElem.tagName == 'INPUT'
+                && ['text', 'password', 'tel', 'url', 'number', 'range', 'search'].indexOf(focusElem.type) != -1))
+                return true;
+        }
+        return false;
+    };
+
+    //console.log(checkInput());
+    */
+
+//    Global.checkRealStatus();
+
+//    Global.tips();
+
+//    Global.simpleLoading.open();
+//    $.alertMsg('hello', true, 1000000);
+});
+</script>
+<!-- -->
+<!-- <script async type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fp726WLTWnwxBVTNORE3blaAsTiPWBy0" ></script> -->
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2GyGPydZu3U2BSKYmVGcQDsS87zBKh7q"></script>-->
+</body> 
+
+</html>

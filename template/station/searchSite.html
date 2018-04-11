@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title></title>
+<link rel="stylesheet" href="css/global.css"/>
+</head>
+<body>
+
+<div class="wrapper">
+	<header class="header">
+		<p class="head_lf" id="searchSite_backObj"><span class="backicon icon"></span></p>
+		<h3 class="head_cn">查找站点</h3>
+		<p class="head_rt" id="searchSite_stationObj"><span class="siteicon main_icon"></span>附近</p>
+	</header>
+	<section class="centerWrap" >
+		<ul class="srh_con mb40">
+            <li class="act_box" id="searchSite_cityTit"><span class="font16">所在区域：</span>
+            	<select id="searchSite_searchCityList" style="display:none">
+                
+                </select>
+            	<em class="sel_arrow"></em>
+            </li>
+			<li class="act_box"><span class="font16">详细地址：</span><input type="text" id="searchSite_searchAddress" placeholder="请输入站点地址" value="" /></li>
+		</ul>
+		<div class="center mb40">
+			<a href="javascript:void(0);" class="btn btn_big" id="searchSite_searchBtn">确定查找</a>
+		</div>
+		<div class="list_wrap" id="searchSite_searchList">
+		</div>
+	</section>
+</div>
+</body>
+
+</html>
